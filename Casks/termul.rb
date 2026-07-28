@@ -1,9 +1,9 @@
 cask "termul" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.2"
-  sha256 arm:   "a10a101561edd7e940a26361e17b7012cd45e2e537bd878e37beafbd918a329d",
-         intel: "19a0d559508ca0d13891e900ada1c7b158ade9198645af9f8c39094345724cad"
+  version "0.4.8"
+  sha256 arm:   "6be298c2c2c8562b340b069357e8b5d6c3838791ac77c089114004db6a663e69",
+         intel: "72b1d5ab617dcc72c021ec4524ec90a8607870d2011fa83686c4ccda185854c8"
 
   url "https://github.com/gnoviawan/termul/releases/download/v#{version}/Termul.Manager_#{version}_#{arch}.dmg"
   name "Termul Manager"
@@ -15,6 +15,8 @@ cask "termul" do
 
   app "Termul Manager.app"
 
+  # v0.4.8 predates Developer ID signing and notarization. Do not copy this
+  # narrowly scoped compatibility exception to later casks.
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Termul Manager.app"]
