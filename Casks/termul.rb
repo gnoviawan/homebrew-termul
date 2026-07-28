@@ -15,7 +15,7 @@ cask "termul" do
 
   app "Termul Manager.app"
 
-  # v0.4.8 predates Developer ID signing and notarization. Do not copy this
+  # v0.4.8 is neither Developer ID signed nor notarized. Do not copy this
   # narrowly scoped compatibility exception to later casks.
   postflight do
     system_command "/usr/bin/xattr",
