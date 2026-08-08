@@ -1,9 +1,9 @@
 cask "termul" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.8"
-  sha256 arm:   "6be298c2c2c8562b340b069357e8b5d6c3838791ac77c089114004db6a663e69",
-         intel: "72b1d5ab617dcc72c021ec4524ec90a8607870d2011fa83686c4ccda185854c8"
+  version "0.4.10"
+  sha256 arm:   "f37c54c38cd31068dc84568bc4cbd131d44efda7cfcf5848e287fffc56f0bc68",
+         intel: "3deef61d7da267fb39e72e1012263fe12ae0cf0c38197d30550bdb1b39c341a0"
 
   url "https://github.com/gnoviawan/termul/releases/download/v#{version}/Termul.Manager_#{version}_#{arch}.dmg"
   name "Termul Manager"
@@ -14,13 +14,6 @@ cask "termul" do
   depends_on macos: :catalina
 
   app "Termul Manager.app"
-
-  # v0.4.8 is neither Developer ID signed nor notarized. Do not copy this
-  # narrowly scoped compatibility exception to later casks.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Termul Manager.app"]
-  end
 
   zap trash: [
     "~/Library/Application Support/com.termul-manager.app",
