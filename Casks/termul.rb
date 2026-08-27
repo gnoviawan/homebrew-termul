@@ -1,9 +1,9 @@
 cask "termul" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.10"
-  sha256 arm:   "f37c54c38cd31068dc84568bc4cbd131d44efda7cfcf5848e287fffc56f0bc68",
-         intel: "3deef61d7da267fb39e72e1012263fe12ae0cf0c38197d30550bdb1b39c341a0"
+  version "0.4.15"
+  sha256 arm:   "9c5725bf1ab8a8c1a324f1b81e38b1bbb472732f936579718d12019d70c70b36",
+         intel: "97107de754e0f2cdd6f03f134ad01445642b3d7cd554d67aa22aa06e5cac486a"
 
   url "https://github.com/gnoviawan/termul/releases/download/v#{version}/Termul.Manager_#{version}_#{arch}.dmg"
   name "Termul Manager"
