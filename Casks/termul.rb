@@ -1,9 +1,9 @@
 cask "termul" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.21"
-  sha256 arm:   "7d0dd72b882ed2c4b051e1cc6cfa4a1b153597b9080a32e1433632a0520f5786",
-         intel: "77b7c0cf40221568c8b94c6b0afb49e466c49e9839de7b1e1c341d3c3a56bf11"
+  version "0.4.50"
+  sha256 arm:   "4def5982a544b4895dcc90ad0addd87d5f493e7ad301c7ef0454e162a475579b",
+         intel: "4b6b71b25a8fd9454327708a638b40009b265e09ec8c2d24f263e939eb7d91cf"
 
   url "https://github.com/gnoviawan/termul/releases/download/v#{version}/Termul.Manager_#{version}_#{arch}.dmg"
   name "Termul Manager"
@@ -11,7 +11,6 @@ cask "termul" do
   homepage "https://github.com/gnoviawan/termul"
 
   auto_updates true
-  depends_on macos: :catalina
 
   app "Termul Manager.app"
 
